@@ -76,22 +76,26 @@ function showDownloadMessage(message) {
   liveMessage.textContent = message;
 }
 
-function isSafePrintableUrl(url) {
+function getSafePrintableUrl(url) {
   if (!url) {
-    return false;
+    return null;
   }
 
   try {
     const parsedUrl = new URL(url, window.location.origin);
-    return parsedUrl.protocol === "http:" || parsedUrl.protocol === "https:";
+    if (parsedUrl.protocol === "http:" || parsedUrl.protocol === "https:") {
+      return parsedUrl.href;
+    }
+    return null;
   } catch {
-    return false;
+    return null;
   }
 }
 
 function handleDownload(card) {
-  if (isSafePrintableUrl(card.pdfUrl)) {
-    window.open(card.pdfUrl, "_blank", "noopener,noreferrer");
+  const safeUrl = getSafePrintableUrl(card.pdfUrl);
+  if (safeUrl) {
+    window.open(safeUrl, "_blank", "noopener,noreferrer");
     return;
   }
 
