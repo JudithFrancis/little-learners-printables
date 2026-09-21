@@ -4,13 +4,13 @@ const printableCatalog = {
       subject: "English",
       title: "Letter Sounds Starter",
       description: "Sample placeholder card for simple phonics matching activities.",
-      pdfUrl: ""
+      pdfUrl: "sample-pdfs/preschool-english-sample.pdf"
     },
     {
       subject: "Maths",
       title: "Count & Circle 1-10",
       description: "Sample placeholder card for counting, number spotting, and tracing.",
-      pdfUrl: ""
+      pdfUrl: "sample-pdfs/preschool-english-sample.pdf"
     },
     {
       subject: "Drawing",
@@ -24,13 +24,13 @@ const printableCatalog = {
       subject: "English",
       title: "Sight Word Practice",
       description: "Sample placeholder card for beginner reading and sentence building.",
-      pdfUrl: ""
+      pdfUrl: "sample-pdfs/primary1-maths-sample.pdf"
     },
     {
       subject: "Maths",
       title: "Add & Subtract Basics",
       description: "Sample placeholder card for simple addition and subtraction drills.",
-      pdfUrl: ""
+      pdfUrl: "sample-pdfs/primary1-maths-sample.pdf"
     },
     {
       subject: "Drawing",
@@ -44,19 +44,19 @@ const printableCatalog = {
       subject: "English",
       title: "Reading Comprehension Mini",
       description: "Sample placeholder card for short passages and question practice.",
-      pdfUrl: ""
+      pdfUrl: "sample-pdfs/primary2-drawing-sample.pdf"
     },
     {
       subject: "Maths",
       title: "Word Problem Warm-Ups",
       description: "Sample placeholder card for age-level arithmetic thinking.",
-      pdfUrl: ""
+      pdfUrl: "sample-pdfs/primary2-drawing-sample.pdf"
     },
     {
       subject: "Drawing",
       title: "Texture & Pattern Drawing",
       description: "Sample placeholder card for line work and pattern creativity.",
-      pdfUrl: ""
+      pdfUrl: "sample-pdfs/primary2-drawing-sample.pdf"
     }
   ]
 };
