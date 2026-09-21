@@ -118,6 +118,10 @@ function createCard(stage, card) {
 
 Object.entries(printableCatalog).forEach(([stage, cards]) => {
   const container = stageContainers[stage];
+  if (!container) {
+    showDownloadMessage(`Configuration note: no card container found for "${stage}".`);
+    return;
+  }
   cards.forEach((card) => {
     container.append(createCard(stage, card));
   });
