@@ -78,11 +78,7 @@ function showDownloadMessage(message) {
 
 function handleDownload(card) {
   if (card.pdfUrl) {
-    const link = document.createElement("a");
-    link.href = card.pdfUrl;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.click();
+    window.open(card.pdfUrl, "_blank", "noopener,noreferrer");
     return;
   }
 
@@ -126,7 +122,7 @@ function createCard(stage, card) {
 Object.entries(printableCatalog).forEach(([stage, cards]) => {
   const container = stageContainers[stage];
   if (!container) {
-    showDownloadMessage(`Configuration note: no card container found for "${stage}".`);
+    console.warn(`Configuration note: no card container found for "${stage}".`);
     return;
   }
   cards.forEach((card) => {
