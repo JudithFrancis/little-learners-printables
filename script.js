@@ -76,14 +76,27 @@ function showDownloadMessage(message) {
   liveMessage.textContent = message;
 }
 
+function isSafePrintableUrl(url) {
+  if (!url) {
+    return false;
+  }
+
+  try {
+    const parsedUrl = new URL(url, window.location.origin);
+    return parsedUrl.protocol === "http:" || parsedUrl.protocol === "https:";
+  } catch {
+    return false;
+  }
+}
+
 function handleDownload(card) {
-  if (card.pdfUrl) {
+  if (isSafePrintableUrl(card.pdfUrl)) {
     window.open(card.pdfUrl, "_blank", "noopener,noreferrer");
     return;
   }
 
   showDownloadMessage(
-    `Sample only: ${card.subject} in ${card.stage}. Add a real PDF URL in script.js to activate this download.`
+    `Sample only: ${card.subject} in ${card.stage}. Add a valid HTTP/HTTPS PDF URL in script.js to activate this download.`
   );
 }
 

@@ -101,7 +101,7 @@ footer {
 .card button:active,
 footer a:hover,
 footer a:active {
-  box-shadow: 0 0 0 3px #bae6fd;
+  opacity: 0.92;
 }
 
 .nav-list a:focus-visible,
