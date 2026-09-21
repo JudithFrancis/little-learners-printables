@@ -94,9 +94,13 @@ footer {
 }
 
 .nav-list a:hover,
+.nav-list a:active,
 .hero-button:hover,
+.hero-button:active,
 .card button:hover,
-footer a:hover {
+.card button:active,
+footer a:hover,
+footer a:active {
   box-shadow: 0 0 0 3px #bae6fd;
 }
 

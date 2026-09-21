@@ -78,7 +78,11 @@ function showDownloadMessage(message) {
 
 function handleDownload(card) {
   if (card.pdfUrl) {
-    window.location.href = card.pdfUrl;
+    const link = document.createElement("a");
+    link.href = card.pdfUrl;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.click();
     return;
   }
 
