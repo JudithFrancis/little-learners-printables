@@ -70,6 +70,9 @@ const stageContainers = {
 const liveMessage = document.getElementById("download-message");
 
 function showDownloadMessage(message) {
+  if (!liveMessage) {
+    return;
+  }
   liveMessage.textContent = message;
 }
 
@@ -127,4 +130,7 @@ Object.entries(printableCatalog).forEach(([stage, cards]) => {
   });
 });
 
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearElement = document.getElementById("year");
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
