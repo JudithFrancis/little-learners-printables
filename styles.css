@@ -93,13 +93,9 @@ footer {
   font-weight: 600;
 }
 
-.nav-list a:focus,
 .nav-list a:hover,
-.hero-button:focus,
 .hero-button:hover,
-.card button:focus,
 .card button:hover,
-footer a:focus,
 footer a:hover {
   box-shadow: 0 0 0 3px #bae6fd;
 }
@@ -108,6 +104,7 @@ footer a:hover {
 .hero-button:focus-visible,
 .card button:focus-visible,
 footer a:focus-visible {
+  box-shadow: 0 0 0 3px #bae6fd;
   outline: 3px solid #0f172a;
   outline-offset: 2px;
 }
