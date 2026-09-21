@@ -6,11 +6,11 @@ A colorful, mobile-friendly static website for free printable learning resources
 
 Because this is a static site (no build step), you can preview it in either way:
 
-- Open `/home/runner/work/little-learners-printables/little-learners-printables/index.html` directly in your browser, or
+- Open `index.html` directly in your browser, or
 - Serve the folder with a simple local server (example):
 
 ```bash
-cd /home/runner/work/little-learners-printables/little-learners-printables
+cd little-learners-printables
 python3 -m http.server 8000
 ```
 
@@ -26,7 +26,7 @@ Deploy as a static site on any host (for example GitHub Pages, Netlify, or Cloud
 
 ## Add real printable PDF links later
 
-Printable cards are defined in `/home/runner/work/little-learners-printables/little-learners-printables/script.js` inside `printableCatalog`.
+Printable cards are defined in `script.js` inside `printableCatalog`.
 
 For each card, replace `pdfUrl: ""` with a real file path or URL, for example:
 
